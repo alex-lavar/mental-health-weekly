@@ -41,7 +41,7 @@ SOURCE STANDARDS:
   "Unverified / Worth Watching" section
 
 EMAIL FORMAT REQUIREMENTS:
-- Clean, readable HTML with inline CSS. Dark text on a lighter background. 
+- Clean, readable HTML with inline CSS (dark background preferred: #0f0f0f or similar)
 - Each story must have an embedded hyperlink to the source
 - Sections:
   1. This Week's Highlights (3-5 top vetted stories)
@@ -52,7 +52,6 @@ EMAIL FORMAT REQUIREMENTS:
   6. Unverified / Worth Watching
   7. Open in Claude button (placeholder — will be injected by script)
 - Use a professional but warm editorial tone
-- Design should be professional so no emojis or radical color combinations.
 - Include the date range covered at the top
 """
 
