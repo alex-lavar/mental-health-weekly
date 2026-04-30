@@ -1,1 +1,27 @@
+name: Send Mental Health Weekly
 
+on:
+  schedule:
+    - cron: '0 13 * * 6'  # Saturday 8am Eastern (UTC-5)
+  workflow_dispatch:       # Also allows manual trigger from GitHub UI
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic sendgrid
+
+      - name: Send newsletter
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+        run: python send_newsletter.py
