@@ -8,7 +8,7 @@ from pathlib import Path
 
 GMAIL_ADDRESS      = os.environ["GMAIL_ADDRESS"]
 GMAIL_APP_PASSWORD = os.environ["GMAIL_APP_PASSWORD"]
-RECIPIENTS         = [r.strip() for r in open("recipients.txt") if r.strip()]
+RECIPIENTS         = [r.strip() for r in os.environ["RECIPIENTS"].split(",") if r.strip()]
 
 def find_latest_digest() -> Path:
     digests = sorted(Path(".").glob("digest_*.html"), reverse=True)
