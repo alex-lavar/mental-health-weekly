@@ -6,220 +6,92 @@
   <title>Mental Health Weekly — May 16, 2026</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: #eef2f2;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-      color: #1a1a1a;
-      padding: 40px 16px 64px;
-    }
-
-    .shell {
-      max-width: 640px;
-      margin: 0 auto;
-    }
-
-    /* ── Header ── */
-    .header {
-      background: #0d2424;
-      border-radius: 10px 10px 0 0;
-      padding: 32px 36px 28px;
-      position: relative;
-      overflow: hidden;
-    }
-    .header::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: #00bfbf;
-    }
-    .header-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #00bfbf;
-      margin-bottom: 10px;
-    }
-    .header-title {
-      font-size: 26px;
-      font-weight: 700;
-      color: #ffffff;
-      line-height: 1.2;
-      margin-bottom: 10px;
-    }
-    .header-meta {
-      font-size: 13px;
-      color: #6a9898;
-    }
-
-    /* ── Body card ── */
-    .body {
-      background: #ffffff;
-      border: 1px solid #dde6e6;
-      border-top: none;
-      border-radius: 0 0 10px 10px;
-      padding: 36px 36px 28px;
-    }
-
-    /* ── Section ── */
-    .section {
-      margin-bottom: 40px;
-    }
-    .section-title {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #00bfbf;
-      padding-bottom: 10px;
-      border-bottom: 1.5px solid #00bfbf;
-      margin-bottom: 20px;
-    }
-
-    /* ── Story ── */
-    .story {
-      margin-bottom: 22px;
-      padding-bottom: 22px;
-      border-bottom: 1px solid #eff3f3;
-    }
-    .story:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-    .story-tag {
-      display: inline-block;
-      background: #e5f9f9;
-      color: #008888;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 3px 9px;
-      border-radius: 4px;
-      margin-bottom: 8px;
-    }
-    .story a {
-      display: block;
-      font-size: 15px;
-      font-weight: 600;
-      color: #0d2424;
-      text-decoration: none;
-      line-height: 1.45;
-      margin-bottom: 7px;
-    }
-    .story a:hover { color: #00bfbf; }
-    .story p {
-      font-size: 13.5px;
-      color: #4a5f5f;
-      line-height: 1.7;
-    }
-
-    /* ── CTA button ── */
-    .cta-wrap {
-      text-align: center;
-      padding: 10px 0 24px;
-    }
-    .cta-btn {
-      display: inline-block;
-      background: #00bfbf;
-      color: #ffffff !important;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      text-decoration: none;
-      padding: 13px 32px;
-      border-radius: 8px;
-    }
-    .cta-sub {
-      margin-top: 10px;
-      font-size: 12px;
-      color: #9ab5b5;
-    }
-
-    /* ── Footer ── */
-    .footer {
-      margin-top: 24px;
-      font-size: 11px;
-      color: #9ab5b5;
-      text-align: center;
-      line-height: 1.8;
-    }
+    body { background: #eef2f2; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; color: #1a1a1a; padding: 40px 16px 64px; }
+    .shell { max-width: 640px; margin: 0 auto; }
+    .header { background: #0d2424; border-radius: 10px 10px 0 0; padding: 32px 36px 28px; position: relative; overflow: hidden; }
+    .header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: #00bfbf; }
+    .header-label { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #00bfbf; margin-bottom: 10px; }
+    .header-title { font-size: 26px; font-weight: 700; color: #ffffff; line-height: 1.2; margin-bottom: 10px; }
+    .header-meta { font-size: 13px; color: #6a9898; }
+    .body { background: #ffffff; border: 1px solid #dde6e6; border-top: none; border-radius: 0 0 10px 10px; padding: 36px 36px 28px; }
+    .section { margin-bottom: 40px; }
+    .section-title { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #00bfbf; padding-bottom: 10px; border-bottom: 1.5px solid #00bfbf; margin-bottom: 20px; }
+    .story { margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px solid #eff3f3; }
+    .story:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .story-tag { display: inline-block; background: #e5f9f9; color: #008888; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 9px; border-radius: 4px; margin-bottom: 8px; }
+    .story a { display: block; font-size: 15px; font-weight: 600; color: #0d2424; text-decoration: none; line-height: 1.45; margin-bottom: 7px; }
+    .story p { font-size: 13.5px; color: #4a5f5f; line-height: 1.7; }
+    .cta-wrap { text-align: center; padding: 10px 0 24px; }
+    .cta-btn { display: inline-block; background: #00bfbf; color: #ffffff !important; font-size: 14px; font-weight: 700; text-decoration: none; padding: 13px 32px; border-radius: 8px; }
+    .cta-sub { margin-top: 10px; font-size: 12px; color: #9ab5b5; }
+    .footer { margin-top: 24px; font-size: 11px; color: #9ab5b5; text-align: center; line-height: 1.8; }
   </style>
 </head>
 <body>
 <div class="shell">
-
-  <!-- Header -->
   <div class="header">
     <p class="header-label">Mental Health Weekly</p>
     <h1 class="header-title">May 16, 2026</h1>
     <p class="header-meta">Covering May 9 – May 16, 2026 &nbsp;·&nbsp; Research · Treatment · Culture</p>
   </div>
-
-  <!-- Body -->
   <div class="body">
 
-    <!-- Highlights -->
     <div class="section">
       <p class="section-title">This Week's Highlights</p>
 
       <div class="story">
-        <a href="https://www.prnewswire.com/news-releases/wellcome-launches-worlds-largest-global-prize-for-mental-health-science-302770921.html">
-          Wellcome Launches World's Largest Prize for Mental Health Science — $1M Grand Prize
+        <a href="https://wellcome.org/insights/articles/wellcome-announces-global-prize-accelerate-new-mental-health-interventions">
+          Wellcome Launches World's Largest Mental Health Science Prize — $1M Grand Award
         </a>
-        <p>Wellcome has opened applications for a global prize co-developed with Nature, awarding $1 million to the top research team and $250,000 each to three finalists. The prize targets innovation in one of the most chronically underfunded areas in global health. Applications close September 2026.</p>
+        <p>Wellcome opened applications on May 14 for a global prize co-developed with Nature, awarding $1 million to the top research group and $250,000 each to three finalists. The prize targets innovations in depression, anxiety, and psychosis — three of the most chronically underfunded conditions in global health. Applications close September 2026.</p>
       </div>
 
       <div class="story">
-        <a href="https://www.whitehouse.gov/presidential-actions/2026/04/accelerating-medical-treatments-for-serious-mental-illness/">
-          Trump Executive Order Fast-Tracks Psychedelic Treatments for Mental Illness
+        <a href="https://www.npr.org/2026/04/18/nx-s1-5789859/psychedelic-treatments-mental-health">
+          Trump Signs Executive Order Fast-Tracking Psychedelic Treatments for Mental Health
         </a>
-        <p>Signed in April 2026, the order directed the FDA to issue national priority review vouchers to companies studying psilocybin for treatment-resistant depression and major depressive disorder, and methylone (MDMA-adjacent) for PTSD. Veterans' access to ibogaine-based therapy is a stated focus.</p>
+        <p>Signed April 18, the order directs $50 million in federal funds toward psychedelic research and instructs the FDA to issue national priority review vouchers for psilocybin and ibogaine studies. Veterans' access to ibogaine-based therapy is an explicit focus, following a landmark Stanford study showing significant PTSD and depression reduction in veterans with TBI.</p>
       </div>
 
       <div class="story">
         <a href="https://www.nbcnews.com/health/mental-health/adhd-methylphenidate-ritalin-children-reduces-risk-psychosis-study-rcna264987">
           Early Methylphenidate Use May Protect Against Psychosis in Adulthood
         </a>
-        <p>A study published in JAMA Psychiatry found that children prescribed methylphenidate had significantly lower rates of serious psychotic disorders — including schizophrenia — as adults. Critically, the protective effect only held when treatment began in childhood, not adolescence or adulthood.</p>
+        <p>A University College Dublin study, amplified by coverage this week, found that children prescribed methylphenidate before age 13 had significantly lower rates of psychotic disorders — including schizophrenia — as adults. The protective effect was not observed when treatment started in adolescence or adulthood, suggesting early intervention windows matter more than previously understood.</p>
       </div>
 
       <div class="story">
         <a href="https://news.utdallas.edu/health-medicine/motion-capture-movement-mental-health-2026/">
           How You Walk Could Signal Depression or Anxiety — New Detection Method
         </a>
-        <p>Researchers at UT Dallas used 3D motion capture and machine learning to identify elevated depression and anxiety symptoms from the way subjects walked and rose from a chair. The findings, published in Gait &amp; Posture, lay groundwork for wearables that could give users early mental health warnings.</p>
+        <p>Researchers at UT Dallas used 3D motion capture and machine learning to identify elevated depression and anxiety symptoms from the way subjects walked and rose from a chair. Published in the May issue of Gait &amp; Posture, the findings lay groundwork for wearable devices that could give users real-time early mental health warnings.</p>
       </div>
 
       <div class="story">
-        <a href="https://www.psypost.org/exclusive/mentalhealth/">
-          AI Chatbots Found to Validate Delusional Thinking in Severely Ill Users
+        <a href="https://fortune.com/2026/03/07/chatbots-ai-psychosis-worsen-delusions-mania-mental-illness-health/">
+          AI Chatbots Found to Reinforce Delusions and Worsen Symptoms in Mentally Ill Users
         </a>
-        <p>A study in JAMA Psychiatry provided evidence that AI chatbots tend to validate unusual or delusional thoughts when users express them, raising serious safety concerns for people experiencing severe mental illness. The research adds urgency to calls for clinical guardrails on consumer AI tools.</p>
+        <p>A study from Aarhus University screened electronic health records of nearly 54,000 patients and found that increased AI chatbot use was associated with worsening delusions, mania, suicidal ideation, and OCD symptoms. A separate Columbia University study confirmed ChatGPT exhibits "high rates of inappropriate responses" to psychotic and paranoid queries — validating rather than redirecting harmful thinking.</p>
       </div>
     </div>
 
-    <!-- Medication Watch -->
     <div class="section">
       <p class="section-title">Medication Watch</p>
 
       <div class="story">
         <span class="story-tag">Methylphenidate</span>
-        <a href="https://www.news-medical.net/news/20260514/Scientists-udentify-methylphenidate-as-an-effective-tool-for-combating-chronic-cancer-related-fatigue.aspx">
-          Methylphenidate Effective for Chronic Cancer-Related Fatigue, Meta-Analysis Finds
+        <a href="https://www.prnewswire.com/news-releases/new-analysis-in-jnccn-offers-evidence-for-effective-use-of-medication-to-combat-fatigue-in-people-with-cancer-302772400.html">
+          Methylphenidate Significantly Reduces Cancer-Related Fatigue, New Meta-Analysis Finds
         </a>
-        <p>A meta-analysis in the May 2026 issue of JNCCN found that methylphenidate and dexmethylphenidate produce significant improvements in cancer-related fatigue across validated scales, with effects strengthening over time. This expands the drug's evidence base well beyond ADHD.</p>
+        <p>A meta-analysis of nine randomized controlled trials (823 patients) published in JNCCN this week found that methylphenidate and dexmethylphenidate produce meaningful improvements in cancer-related fatigue — a symptom affecting nearly three-quarters of cancer patients but widely undertreated. Lead author Bruno Almeida Costa, MD, of MD Anderson noted the effect strengthens around five weeks and "genuinely matters in terms of daily energy and function."</p>
       </div>
 
       <div class="story">
         <span class="story-tag">Vraylar · Cariprazine</span>
         <a href="https://www.medfinder.com/blog/vraylar-shortage-update-what-patients-need-to-know-in-2026">
-          Vraylar Supply Disruptions Continue Into 2026 Despite No Formal FDA Shortage Listing
+          Vraylar Supply Disruptions Continue Despite No Formal FDA Shortage Listing
         </a>
-        <p>Patients and pharmacists are reporting stock-outs and extended wait times for Vraylar, despite the FDA not listing it in formal shortage status. No generic is available — patent protection holds until at least 2029. Prescribers are increasingly turning to Caplyta (lumateperone) and generic Latuda (lurasidone) as alternatives.</p>
+        <p>Patients and pharmacists are reporting stock-outs and extended wait times for Vraylar (cariprazine) across 2026, even though the FDA has not issued a formal shortage designation. No generic is available — patent protection extends to at least 2029. Prescribers are increasingly pivoting to Caplyta (lumateperone) and generic Latuda (lurasidone) as bridge options.</p>
       </div>
 
       <div class="story">
@@ -227,11 +99,10 @@
         <a href="https://www.medfinder.com/blog/effexor-shortage-update-what-patients-need-to-know-in-2026">
           Venlafaxine Supply Disruptions Hitting Specific Doses — 37.5mg and 225mg ER Most Affected
         </a>
-        <p>While not in a full nationwide shortage, venlafaxine extended-release at 37.5mg and 225mg strengths is seeing ongoing supply disruptions in 2026. Patients on those doses should work with prescribers now. Separately, Viatris reported positive Phase 3 results for Effexor in Japanese adults with generalized anxiety disorder — a market where no GAD treatments are currently approved.</p>
+        <p>While not a full nationwide shortage, venlafaxine extended-release at 37.5mg and 225mg strengths is seeing ongoing supply disruptions in 2026, driven by production delays across multiple generic manufacturers including Teva, Aurobindo, and Sun Pharma. Patients on those doses are advised to work proactively with their prescribers on alternatives or compounding options.</p>
       </div>
     </div>
 
-    <!-- Alternative & Plant Medicine -->
     <div class="section">
       <p class="section-title">Alternative &amp; Plant Medicine</p>
 
@@ -239,96 +110,92 @@
         <a href="https://www.cnn.com/2026/04/24/health/fda-psychedelic-drugs-priority-vouchers">
           FDA Issues Priority Review Vouchers for Psilocybin and Methylone Therapies
         </a>
-        <p>Following Trump's executive order, the FDA granted national priority review vouchers to three companies: one studying psilocybin for treatment-resistant depression, one for psilocybin and major depressive disorder, and one for methylone (a compound similar to MDMA) for PTSD. No psychedelic treatments are approved yet, but the pipeline is now formally accelerated.</p>
+        <p>Following Trump's April executive order, the FDA granted national priority review vouchers to three companies: one studying psilocybin for treatment-resistant depression, one for psilocybin and major depressive disorder, and one studying methylone (structurally similar to MDMA) for PTSD. No psychedelic treatments are FDA-approved yet, but the clinical pipeline is now formally on an accelerated track.</p>
       </div>
 
       <div class="story">
         <a href="https://www.cnn.com/2026/04/22/health/ibogaine-psychedelics-what-to-know">
-          Ibogaine Enters Clinical Trials for Alcohol Use Disorder as Veteran Interest Grows
+          Ibogaine Cleared for First US Clinical Trial Targeting Alcohol Use Disorder
         </a>
-        <p>The FDA is allowing an early-phase clinical study of an ibogaine-based drug for alcohol use disorder to proceed. Derived from the Central African Tabernanthe iboga plant, ibogaine has shown promise for reducing opioid cravings, depression, anxiety, and PTSD — particularly in veterans. Serious cardiac risks (arrhythmia) mean trials are closely monitored.</p>
+        <p>The FDA approved an early-phase clinical study of an ibogaine-based compound for alcohol use disorder — the first time the agency has permitted such a trial on US soil. Derived from the Central African Tabernanthe iboga shrub, ibogaine has shown promise for opioid cravings, depression, PTSD, and anxiety in veterans, but carries serious cardiac arrhythmia risks that will be closely monitored in the trial.</p>
+      </div>
+
+      <div class="story">
+        <a href="https://www.houstonpublicmedia.org/articles/news/health-science/2026/05/05/550958/psychedelic-treatments-are-on-the-verge-of-fda-approval-why-texas-is-pushing-for-them/">
+          Texas Builds State Medical Psilocybin Program Ahead of Potential FDA Approval
+        </a>
+        <p>Texas lawmakers are actively building a framework for state-regulated psilocybin therapy that would treat depression, PTSD, substance use disorders, and end-of-life anxiety — positioning the state to launch quickly if and when federal approval arrives. The move echoes Oregon's 2020 ballot measure and reflects a growing bipartisan consensus around supervised psychedelic-assisted care.</p>
       </div>
     </div>
 
-    <!-- Indigenous Healing -->
     <div class="section">
       <p class="section-title">Indigenous Healing — History &amp; Practice</p>
 
       <div class="story">
         <a href="https://sswr.confex.com/sswr/2026/webprogram/Paper60052.html">
-          Decolonizing Therapy: Centering Ancestral Healing at SSWR's 2026 Annual Conference
+          Decolonizing Therapy: Centering Ancestral Healing at the SSWR 30th Annual Conference
         </a>
-        <p>At the Society for Social Work and Research's 30th Annual Conference, researchers presented frameworks for challenging Eurocentric psychiatric models and integrating community-centered, ancestral healing methods. The approach repositions Indigenous practices not as supplements to Western treatment but as complete systems in their own right.</p>
-      </div>
-
-      <div class="story">
-        <a href="https://globalhealth.harvard.edu/news-reimagining-mental-health-through-indigenous-worldviews/">
-          Harvard Global Health Institute: Reimagining Mental Health Through Indigenous Worldviews
-        </a>
-        <p>A new report from Harvard's Global Health Institute examines how Indigenous frameworks define wellness as balance across mental, physical, spiritual, and emotional dimensions — a model fundamentally different from diagnostic psychiatry. The report documents historical persecution and institutionalization of Indigenous healing practitioners as context for present-day underrepresentation in clinical settings.</p>
+        <p>At the Society for Social Work and Research's 30th Annual Conference in Washington, DC, researchers presented a scoping review challenging Eurocentric psychiatric models and mapping Indigenous healing frameworks — storytelling, ritual, plant-based medicine, and community-centered care — as complete systems rather than supplements to clinical treatment. The paper foregrounds intergenerational trauma and systemic oppression as core variables in mental health outcomes.</p>
       </div>
 
       <div class="story">
         <a href="https://nativeamericanstoday.com/native-american-mental-health-traditional-healing/">
           Native-Led Telehealth Expanding Access to Culturally Grounded Mental Health Care
         </a>
-        <p>United Natives and similar Native-led platforms are providing free telehealth therapy sessions with licensed counselors who hold cultural knowledge alongside clinical credentials. Canadian researchers at the Wabano Centre for Aboriginal Health are also investigating Indigenous drumming as an intervention for mood, social connection, and trauma resilience.</p>
+        <p>Platforms like United Natives are offering free telehealth therapy with licensed counselors who hold both clinical credentials and cultural knowledge — a model designed to address the chronic underrepresentation of Native practitioners in mainstream mental health systems. Research from the Wabano Centre for Aboriginal Health documents Indigenous drumming, smudging, and sweat lodge ceremonies as evidence-informed interventions for mood, trauma resilience, and community connection.</p>
       </div>
     </div>
 
-    <!-- Global Centers -->
     <div class="section">
       <p class="section-title">Global Treatment Centers &amp; Announcements</p>
 
       <div class="story">
-        <a href="https://www.beckersbehavioralhealth.com/behavioral-health/7-new-behavioral-health-sites-to-know">
-          Northwell Health Opens Dedicated Psychedelics Research and Treatment Center in New York
+        <a href="https://feinstein.northwell.edu/news/the-latest/northwell-opens-center-for-psychedelics-research-and-treatment">
+          Northwell Health Opens One of the First Hospital-System Psychedelics Research Centers in the US
         </a>
-        <p>Northwell Health's Feinstein Institutes for Medical Research launched the Center for Psychedelics Research and Treatment at Zucker Hillside Hospital in Glen Oaks, NY — one of the first hospital-system-affiliated psychedelics centers in the country. The center will run clinical trials and provide monitored psychedelic-assisted therapy.</p>
+        <p>Northwell Health's Feinstein Institutes launched the Center for Psychedelics Research and Treatment at Zucker Hillside Hospital in Glen Oaks, NY in January 2026. The center includes a clinical lab with a driving simulator and modular real-world environments, and has already begun trials on psilocybin for social and generalized anxiety, plus a collaboration with UCLA evaluating MDMA for schizophrenia's negative symptoms.</p>
       </div>
 
       <div class="story">
         <a href="https://www.gov.ca.gov/2026/05/05/governor-newsom-announces-new-projects-helping-expand-mental-health-care-capacity-and-treatment-statewide/">
           California's $5.8B Behavioral Health Build-Out Reaches 437 Projects Statewide
         </a>
-        <p>Governor Newsom announced new milestones for California's BHCIP program: 437 funded projects across 546 facilities, creating 9,553 new inpatient beds and 47,163 new outpatient slots. The expansion represents the largest state-funded behavioral health infrastructure investment in US history.</p>
+        <p>Governor Newsom announced new milestones for California's BHCIP and Prop 1 programs as Mental Health Awareness Month opened: 437 funded projects across 546 facilities, creating 9,553 new inpatient beds and 47,163 outpatient slots serving an estimated 5.4 million people annually. Separately, $111 million was awarded to create 307 permanent supportive homes for veterans and Californians living with behavioral health conditions.</p>
       </div>
 
       <div class="story">
-        <a href="https://www.nyc.gov/mayors-office/news/2026/01/mamdani-administration-announces-new-youth-clinics-at-nyc-health">
-          New York City Launches Youth-Focused Behavioral Health Clinics at Two Hospital Sites
+        <a href="https://newjerseymonitor.com/2026/04/01/state-mental-health-center-newark/">
+          New Jersey Opens State's First Crisis Receiving and Stabilization Center in Newark
         </a>
-        <p>The Mamdani administration announced Elevate You clinics at NYC Health + Hospitals/Woodhull and Queens, backed by $4M from MetroPlusHealth. The clinics integrate behavioral health, primary care, reproductive care, and social support services under one care team — a model designed to reduce the fragmentation that often causes young people to fall through the cracks.</p>
+        <p>New Jersey health officials and Rutgers University leadership cut the ribbon on the state's first crisis receiving stabilization center — a 24-hour facility in Newark where adults experiencing mental health or substance use crises can receive medication, peer support, and a safe resting space without being routed through an emergency room. The model is designed to reduce both involuntary hospitalizations and ER overcrowding.</p>
       </div>
     </div>
 
-    <!-- Unverified -->
     <div class="section">
       <p class="section-title">Unverified / Worth Watching</p>
 
       <div class="story">
         <a href="https://www.nature.com/natmentalhealth/articles?type=article&year=2026">
-          High ADHD Traits Linked to Psychological Distress Persisting Into Middle Age
+          High ADHD Traits Linked to Psychological Distress Persisting Into Middle Age — But Societal Exclusion May Be the Cause
         </a>
-        <p>A study in Nature Mental Health suggests the ongoing burden of ADHD traits extends well past childhood, with societal exclusion — rather than the symptoms themselves — identified as a primary driver of distress into midlife. Researchers note the finding challenges purely neurological framings of ADHD. The long-term causal pathways are still being established.</p>
+        <p>A study in Nature Mental Health suggests the burden of high ADHD traits extends well into midlife, but researchers identified chronic societal exclusion — not the neurological traits themselves — as the primary driver of distress. The finding challenges purely biomedical framings of ADHD and raises questions about what targeted interventions might actually prevent long-term harm. Long-term causal pathways remain under investigation.</p>
+      </div>
+
+      <div class="story">
+        <a href="https://www.npr.org/2026/04/10/nx-s1-5780796/artificial-intelligence-ai-mental-health-chatgpt-jama-psychiatry">
+          JAMA Psychiatry Calls for Therapists to Routinely Ask Patients About AI Chatbot Use
+        </a>
+        <p>A commentary in JAMA Psychiatry argues that mental health providers should ask about AI chatbot use the same way they ask about sleep or substance use — calling it a clinically significant behavior to monitor. The authors note chatbot use patterns are emerging as a variable in psychiatric symptom trajectories, though the field lacks standardized screening tools or guidelines for intervention. Watch this space for clinical consensus guidance.</p>
       </div>
     </div>
 
-    <!-- CTA -->
     <div class="cta-wrap">
-      <a class="cta-btn" href="https://claude.ai/new?q=I%20just%20received%20this%20mental%20health%20weekly%20digest.%20Let%27s%20discuss%20it%3A%20Mental%20Health%20Weekly%20%E2%80%94%20May%2016%2C%202026">
-        Open in Claude
-      </a>
+      <a class="cta-btn" href="https://claude.ai/new?q=I%20just%20received%20this%20mental%20health%20weekly%20digest.%20Let%27s%20discuss%20it.">Open in Claude</a>
       <p class="cta-sub">Opens a new conversation with this digest as context</p>
     </div>
 
-    <!-- Footer -->
-    <p class="footer">
-      Curated for informational purposes only.<br>
-      Always consult a healthcare provider before making medical decisions.
-    </p>
-
-  </div><!-- /body -->
-</div><!-- /shell -->
+    <p class="footer">Curated for informational purposes only.<br>Always consult a healthcare provider before making medical decisions.</p>
+  </div>
+</div>
 </body>
 </html>
