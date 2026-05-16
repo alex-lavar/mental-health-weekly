@@ -68,7 +68,7 @@ def build_user_prompt():
 def generate_email_html():
     client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
     response = client.messages.create(
-        model="claude-opus-4-5",
+        model="claude-opus-4-7",
         max_tokens=8000,
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         system=SYSTEM_PROMPT,
