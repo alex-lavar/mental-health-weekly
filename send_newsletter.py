@@ -85,13 +85,25 @@ def generate_digest() -> dict:
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": build_user_prompt()}]
     )
-    for block in reversed(response.content):
-        if block.type == "text":
-            text = block.text.strip()
-            if text.startswith("```"):
-                text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+
+    # Collect non-empty text blocks; try each from last to first
+    text_blocks = [b.text.strip() for b in response.content if b.type == "text" and b.text.strip()]
+    print(f"Text blocks received: {len(text_blocks)}")
+
+    for text in reversed(text_blocks):
+        # Strip markdown code fences if present
+        if text.startswith("```"):
+            text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+        # Extract JSON object even if Claude added preamble text
+        if "{" in text:
+            text = text[text.index("{") : text.rindex("}") + 1]
+        try:
             return json.loads(text)
-    raise ValueError("No JSON output from Claude")
+        except json.JSONDecodeError:
+            continue
+
+    print(f"Raw text blocks for debugging: {text_blocks}")
+    raise ValueError("No valid JSON found in Claude's response")
 
 # --- HTML template helpers ---
 
