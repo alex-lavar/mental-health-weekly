@@ -1,9 +1,11 @@
 name: Send Mental Health Weekly
 
 on:
-  schedule:
-    - cron: '0 13 * * 6'  # Saturday 8am Eastern (UTC-5)
-  workflow_dispatch:       # Manual trigger from GitHub Actions tab
+  push:
+    branches: [main]
+    paths:
+      - 'digest_*.html'
+  workflow_dispatch:
 
 jobs:
   send:
@@ -16,12 +18,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
-        run: pip install anthropic
-
-      - name: Send newsletter
+      - name: Send digest
         env:
-          ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
           GMAIL_ADDRESS:      ${{ secrets.GMAIL_ADDRESS }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-        run: python send_newsletter.py
+        run: python send.py
